@@ -13,16 +13,21 @@
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
+    "csv-loader": "^3.0.2",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "lodash": "^4.17.5",
     "style-loader": "^0.22.1",
+    "url-loader": "^1.1.1",
     "webpack": "^4.16.5",
-    "webpack-cli": "^2.1.5"
+    "webpack-cli": "^2.1.5",
+    "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "papaparse": "^4.6.0",
+    "static": "^2.0.0"
   }
 }

@@ -20,7 +20,7 @@ class WebpackTestConfig {
       },
       output: {
         path: path.resolve('dist','test'),
-        filename: 'bundle.js',
+        filename: 'bundle.js',  //[name].[chunkhash].js
         publicPath: '/webpack-react-demo/dist/test/',  //浏览器访问资源的url： publicPath: /assets/ =》 http:server/assets/
         chunkFilename: '[name].[chunkhash:5].chunk.js'  //被 chunk 的 name 替换（或者，在 chunk 没有 name 时使用 id 替换）,被 chunk 的 hash 替换。
       },
@@ -28,7 +28,7 @@ class WebpackTestConfig {
       plugins: [
         new CleanWebpackPlugin(  //每次构建前，清理dist文件
             [     //相对于root
-                'dist'
+                'dist/test'
             ],
             {
                 root: path.resolve('src','../'),//[webpack.config的地址] 一个根的绝对路径.
@@ -42,7 +42,7 @@ class WebpackTestConfig {
             chunks:['test'], //指定引用哪些js文件，针对多入口（entry）文件，默认会全部引用，
             filename:'index.html',
             inject: true,   //true,body: script标签位于body底部，head：位于head 标签内，false：不自动引入script标签
-            favicon: '',    //给生成的 html 文件生成一个 favicon。属性值为 favicon 文件所在的路径名。
+            favicon: path.resolve('src','images/favicon.png'),    //给生成的 html 文件生成一个 favicon。属性值为 favicon 文件所在的路径名。
             minify:{
                 collapseWhitespace:true //折叠空白区域 也就是压缩代码
             },
@@ -58,21 +58,52 @@ class WebpackTestConfig {
           { //样式加载器
             test: /\.*[s]?css$/,
             use: [
-            'style-loader',
-            'css-loader',
-            'less-loader'
+                'style-loader',
+                'css-loader',
+                'less-loader'
             ]
           },
 
-          { //图片
+          { //图片, 未使用的资源不会打包
             test: /\.(png|svg|jpg|gif)$/,
             use: {
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'images/'
+                    limit: 1000, //小于1000bytes的图片将直接以base64的形式内联在代码中,否则存在目录下,可以减少一次http请求；
+                    outputPath: 'images/',   //path 目录下
+                    name: '[name]@[hash:8].[ext]',  //在原图片名前加上8位 hash , 不配置值默认是文件哈希,
+                    //publicPath: ""
                 }
             }
+          },
 
+          {    //字体
+            test: /\.(woff|woff2|eot|ttf|otf)$/,
+            use: {
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'font/'
+                }
+            }
+          },
+
+          {
+            test: /\.(csv|tsv)$/,
+            use: {
+                loader: 'csv-loader',
+                options: {
+                    outputPath: 'static/data'
+                }
+            }
+          },
+          {
+            test: /\.xml$/,
+            use: {
+                loader: 'xml-loader',
+                options: {
+                    outputPath: 'static/data'
+                }
+            }
           }
         ]
       },
@@ -82,10 +113,12 @@ class WebpackTestConfig {
           styles: path.resolve('src', 'styles/'),
           components: path.resolve('src', 'components/'),
           containers: path.resolve('src', 'containers/'),
-          images: path.resolve('src','images/')
+          images: path.resolve('src','images/'),
+          font: path.resolve('src', 'font/'),
+          static: path.resolve('src', 'static/')
         },
 
-        //extensions: ['.js', '.jsx','.json','.scss'],  //自动解析确定从扩展
+        extensions: ['.js', '.jsx','.json','.scss'],  //自动解析确定从扩展
       }
     };
   }

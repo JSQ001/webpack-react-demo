@@ -12,7 +12,9 @@ const component=()=>{
     // 将图像添加到我们现有的 div。
     const myIcon = new Image();
     myIcon.src = BG;
+    myIcon.id='image';
     element.appendChild(myIcon);
+
     return element;
 };
 

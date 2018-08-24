@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var escape = __webpack_require__(/*! ../../node_modules/css-loader/lib/url/escape.js */ \"./node_modules/css-loader/lib/url/escape.js\");\nexports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"#root {\\n  width: 100vw;\\n  height: 20px;\\n  background: url(\" + escape(__webpack_require__(/*! ../images/BG.jpg */ \"./src/images/BG.jpg\")) + \");\\n}\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/styles/common.scss?./node_modules/css-loader!./node_modules/less-loader/dist/cjs.js");
+eval("var escape = __webpack_require__(/*! ../../node_modules/css-loader/lib/url/escape.js */ \"./node_modules/css-loader/lib/url/escape.js\");\nexports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"@font-face {\\n  font-family: 'MyFont';\\n  src: url(\" + escape(__webpack_require__(/*! ../font/my.woff */ \"./src/font/my.woff\")) + \") format('woff2'), url(\" + escape(__webpack_require__(/*! ../font/my.woff2 */ \"./src/font/my.woff2\")) + \") format('woff');\\n  font-weight: 600;\\n  font-style: normal;\\n}\\n#welcome {\\n  font-family: 'MyFont';\\n  color: red;\\n}\\n#root {\\n  width: 40px;\\n  height: 20px;\\n  background: url(\" + escape(__webpack_require__(/*! ../images/BG.jpg */ \"./src/images/BG.jpg\")) + \");\\n  display: inline;\\n}\\n#image {\\n  width: 40px;\\n  height: 20px;\\n  margin-left: 20px;\\n}\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/styles/common.scss?./node_modules/css-loader!./node_modules/less-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -182,7 +182,7 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styles_common_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styles/common.scss */ \"./src/styles/common.scss\");\n/* harmony import */ var styles_common_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styles_common_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var containers_main_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! containers/main.js */ \"./src/containers/main.js\");\n/* harmony import */ var containers_main_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(containers_main_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var images_BG_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! images/BG.jpg */ \"./src/images/BG.jpg\");\n/* harmony import */ var images_BG_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(images_BG_jpg__WEBPACK_IMPORTED_MODULE_3__);\n // lodash 是由当前 script 脚本 import 导入进来的\n\n\n\n\nconst component=()=>{\n    const element = document.createElement('div');\n    element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join(['Hello', 'webpack'], ' ');\n    element.classList.add('hello');\n    element.id = 'root';\n\n    // 将图像添加到我们现有的 div。\n    const myIcon = new Image();\n    myIcon.src = images_BG_jpg__WEBPACK_IMPORTED_MODULE_3___default.a;\n    element.appendChild(myIcon);\n    return element;\n};\n\n\ndocument.body.appendChild(component());\n\n\n//# sourceURL=webpack:///./src/client.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styles_common_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styles/common.scss */ \"./src/styles/common.scss\");\n/* harmony import */ var styles_common_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styles_common_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var containers_main_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! containers/main.js */ \"./src/containers/main.js\");\n/* harmony import */ var images_BG_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! images/BG.jpg */ \"./src/images/BG.jpg\");\n/* harmony import */ var images_BG_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(images_BG_jpg__WEBPACK_IMPORTED_MODULE_3__);\n // lodash 是由当前 script 脚本 import 导入进来的\n\n\n\n\nconst component=()=>{\n    const element = document.createElement('div');\n    element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join(['Hello', 'webpack'], ' ');\n    element.classList.add('hello');\n    element.id = 'root';\n\n    // 将图像添加到我们现有的 div。\n    const myIcon = new Image();\n    myIcon.src = images_BG_jpg__WEBPACK_IMPORTED_MODULE_3___default.a;\n    myIcon.id='image';\n    element.appendChild(myIcon);\n\n    return element;\n};\n\n\ndocument.body.appendChild(component());\n\n\n//# sourceURL=webpack:///./src/client.js?");
 
 /***/ }),
 
@@ -190,10 +190,33 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var loda
 /*!********************************!*\
   !*** ./src/containers/main.js ***!
   \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("console.log(123)\n\n//# sourceURL=webpack:///./src/containers/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var static_data_data_xml__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! static/data/data.xml */ \"./src/static/data/data.xml\");\n/* harmony import */ var static_data_data_xml__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(static_data_data_xml__WEBPACK_IMPORTED_MODULE_0__);\n\n\nconsole.log(static_data_data_xml__WEBPACK_IMPORTED_MODULE_0___default.a)\n\n//# sourceURL=webpack:///./src/containers/main.js?");
+
+/***/ }),
+
+/***/ "./src/font/my.woff":
+/*!**************************!*\
+  !*** ./src/font/my.woff ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"font/d41d8cd98f00b204e9800998ecf8427e.woff\";\n\n//# sourceURL=webpack:///./src/font/my.woff?");
+
+/***/ }),
+
+/***/ "./src/font/my.woff2":
+/*!***************************!*\
+  !*** ./src/font/my.woff2 ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"font/d41d8cd98f00b204e9800998ecf8427e.woff2\";\n\n//# sourceURL=webpack:///./src/font/my.woff2?");
 
 /***/ }),
 
@@ -204,7 +227,18 @@ eval("console.log(123)\n\n//# sourceURL=webpack:///./src/containers/main.js?");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"images/a9da99b9526eca9f4581d8393034bc86.jpg\";\n\n//# sourceURL=webpack:///./src/images/BG.jpg?");
+eval("module.exports = __webpack_require__.p + \"images/BG@a9da99b9.jpg\";\n\n//# sourceURL=webpack:///./src/images/BG.jpg?");
+
+/***/ }),
+
+/***/ "./src/static/data/data.xml":
+/*!**********************************!*\
+  !*** ./src/static/data/data.xml ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = {\"note\":{\"to\":[\"Mary\"],\"from\":[\"John\"],\"heading\":[\"Reminder\"],\"body\":[\"Call Cindy on Tuesday\"]}}\n\n//# sourceURL=webpack:///./src/static/data/data.xml?");
 
 /***/ }),
 
