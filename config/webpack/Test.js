@@ -9,22 +9,67 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const npmBase = path.join(__dirname, '../../node_modules');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+const ManifestPlugin = require('webpack-manifest-plugin');
+const webpack = require('webpack');
 
 class WebpackTestConfig {
 
   constructor() {
     this.config = {
       entry: {
-         test: path.resolve('src','client.js')
+         test: path.resolve('src','client.js'),
       },
+    /* entry:[  //webpack-hot-middleware
+       'webpack/hot/dev-server',
+       'webpack-hot-middleware/client',
+     ],*/
       output: {
         path: path.resolve('dist','test'),
         filename: 'bundle.js',  //[name].[chunkhash].js
-        publicPath: '/webpack-react-demo/dist/test/',  //浏览器访问资源的url： publicPath: /assets/ =》 http:server/assets/
+        publicPath:'/webpack-react-demo/dist/test/',  //浏览器访问资源的url： publicPath: /assets/ =》 http:server/assets/
         chunkFilename: '[name].[chunkhash:5].chunk.js'  //被 chunk 的 name 替换（或者，在 chunk 没有 name 时使用 id 替换）,被 chunk 的 hash 替换。
       },
+
+      context: path.resolve('src/'),  //
       mode: 'development',
+      devtool: 'inline-source-map',  //便于追踪错误和警告。开发环境和生产环境值不一样
+
+      devServer: {   //提供一个简单的web服务器，不会生成打包文件，只会存在内存
+          contentBase: path.resolve('test')+'/',   //（打包后资源存放虚拟目录，实际上存在内存,类似于output.path）资源目录,不配置则是项目下，推荐使用绝对路径
+          compress: false, //资源目录下的文件是否压缩
+          port: 8899,
+          publicPath: '/webpack-react-demo/dist/test/',  //此路径下的打包文件可在浏览器中访问,类似于(与其保持一致,或者二者配一个)output.publicPath
+          //host: '192.168.1.1',
+          //lazy: true,
+          inline: true, //当刷新页面的时候，一个小型的客户端被添加到webpack.config.js的入口文件中
+          overlay: {
+              warnings: true,
+              errors: true
+          },
+          index: 'index.html',
+          open: 'Google Chrome',    //自动打开页面
+          hot: true, //热部署
+          headers: {  //在所有响应中添加首部内容
+              "X-Custom-Headers": "jsq-test"
+          },
+          historyApiFallback: {  //如果为true，则是index.html
+              disableDotRule: true,
+              rewrites: [//当发生404时，给定替换的规则，
+                  { from: /^\/$/, to: path.resolve('dist','test/views/landing.html')},
+                  { from: /^\/subpage/, to: path.resolve('dist', 'test/views/subpage.html')},
+                  { from: /./, to: path.resolve('dist', 'test/views/404.html' )}
+              ]
+          },
+          filename: 'bundle.js', //只在懒加载模式有效，每个请求结果都会产生全新的编译。使用 filename，可以只在某个文件被请求时编译。
+          /*https: {  //设置签名证书
+              key: fs.readFileSync(path.resolve('src','static/keys/jsq.key')),
+              cert: fs.readFileSync(path.resolve('src','static/keys/jsq.crt')),
+              ca: fs.readFileSync(path.resolve('src','static/keys/jsq.pem')),
+          }*/
+      },
+
+
+
       plugins: [
         new CleanWebpackPlugin(  //每次构建前，清理dist文件
             [     //相对于root
@@ -51,7 +96,13 @@ class WebpackTestConfig {
             showErrors: true, //webpack会将错误信息包裹在一个 pre 标签内，默认值为 true
             chunksSortMode: 'auto', // script引用顺序
             template: path.resolve('src','index.html')
-        })
+        }),
+
+        new ManifestPlugin({  //在path目录下生成打包路径映射json文件
+            filename: 'manifest.json', //默认manifest.json
+        }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
       ],
       module:{   //在module中添加加载器loader, 打包后css写入了js文件，所以不会生成css文件
         rules: [
@@ -119,7 +170,7 @@ class WebpackTestConfig {
         },
 
         extensions: ['.js', '.jsx','.json','.scss'],  //自动解析确定从扩展
-      }
+      },
     };
   }
 }
