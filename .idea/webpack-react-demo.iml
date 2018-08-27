@@ -12,5 +12,6 @@
     <orderEntry type="library" name="@types/es6-promisify" level="application" />
     <orderEntry type="library" name="@types/es6-weak-map" level="application" />
     <orderEntry type="library" name="@types/node" level="application" />
+    <orderEntry type="library" name="@types/node" level="application" />
   </component>
 </module>
