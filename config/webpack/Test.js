@@ -31,7 +31,7 @@ class WebpackTestConfig {
       },
 
       context: path.resolve('src/'),  //
-      mode: 'development',
+      mode: 'development',  //production: 压缩文件，删除未使用代码(dead code)
       devtool: 'inline-source-map',  //便于追踪错误和警告。开发环境和生产环境值不一样
 
       devServer: {   //提供一个简单的web服务器，不会生成打包文件，只会存在内存

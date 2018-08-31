@@ -30,5 +30,6 @@ module.exports = (configName) => {
   // Set the global environment
   process.env.NODE_ENV = loadedInstance.env;
 
+  console.log(loadedInstance)
   return loadedInstance.config;
 };

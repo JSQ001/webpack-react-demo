@@ -5,7 +5,6 @@
  */
 const fs = require('fs');
 const path = require('path');
-
 const npmBase = path.join(__dirname, '../../node_modules');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -31,7 +30,8 @@ class WebpackBaseConfig {
    * @return {Object}
    */
   set config(data) {
-    this._config = Object.assign({}, this.defaultSettings, data);
+    console.log({'data':data})
+    this._config = { ...this.defaultSettings, ...data};
     return this._config;
   }
 
@@ -51,12 +51,16 @@ class WebpackBaseConfig {
     return 'dev';
   }
 
+  set env(env){
+    this.env = env
+  }
+
   /**
    * Get the absolute path to src directory
    * @return {String}
    */
   get srcPathAbsolute() {
-    return path.resolve('./src');
+    return path.resolve('src');
   }
 
   /**
@@ -79,27 +83,56 @@ class WebpackBaseConfig {
     };
 
     return {
-      context: this.srcPathAbsolute,
-      devtool: 'eval',
-      devServer: {
-        contentBase: './src/',
-        publicPath: '/assets/',
-        historyApiFallback: true,
-        hot: true,
-        inline: true,
-        port: 8011,
-        //host:'192.168.1.114',
-        disableHostCheck: true,
-        proxy: {
-          '/api': {
-            target: 'http://116.228.77.183:25297',
-            secure: true,
-            changeOrigin: true,
-            pathRewrite: { '^/api': '' }
-          }
-        }
+      //context: this.srcPathAbsolute,
+      entry: {
+        app: `${this.srcPathAbsolute}/client.js`,
       },
-      entry: './index.js',
+      output: {
+        path: path.resolve('dist'),
+        filename: 'bundle.js',  //[name].[chunkhash].js
+        publicPath:'/webpack-react-demo/dist/',  //浏览器访问资源的url： publicPath: /assets/ =》 http:server/assets/
+        chunkFilename: '[name].[chunkhash:5].chunk.js'  //被 chunk 的 name 替换（或者，在 chunk 没有 name 时使用 id 替换）,被 chunk 的 hash 替换。
+      },
+
+      devtool: 'eval',
+      mode: 'development',  //production: 压缩文件，删除未使用代码(dead code)
+
+      devServer: {   //提供一个简单的web服务器，不会生成打包文件，只会存在内存
+        contentBase: path.resolve('test')+'/',   //（打包后资源存放虚拟目录，实际上存在内存,类似于output.path）资源目录,不配置则是项目下，推荐使用绝对路径
+        compress: false, //资源目录下的文件是否压缩
+        port: 8899,
+        publicPath: '/webpack-react-demo/dist',  //此路径下的打包文件可在浏览器中访问,类似于(与其保持一致,或者二者配一个)output.publicPath
+        //host: '192.168.1.1',
+        //lazy: true,
+        inline: true, //当刷新页面的时候，一个小型的客户端被添加到webpack.config.js的入口文件中
+        overlay: {
+          warnings: true,
+          errors: true
+        },
+        index: 'index.html',
+        open: 'Google Chrome',    //自动打开页面
+        hot: true, //热部署
+        headers: {  //在所有响应中添加首部内容
+          "X-Custom-Headers": "jsq-test"
+        },
+        historyApiFallback: {  //如果为true，则是index.html
+          disableDotRule: true,
+          rewrites: [//当发生404时，给定替换的规则，
+            { from: /^\/$/, to: path.resolve('dist','test/views/landing.html')},
+            { from: /^\/subpage/, to: path.resolve('dist', 'test/views/subpage.html')},
+            { from: /./, to: path.resolve('dist', 'test/views/404.html' )}
+          ]
+        },
+        filename: 'bundle.js', //只在懒加载模式有效，每个请求结果都会产生全新的编译。使用 filename，可以只在某个文件被请求时编译。
+        /*https: {  //设置签名证书
+            key: fs.readFileSync(path.resolve('src','static/keys/jsq.key')),
+            cert: fs.readFileSync(path.resolve('src','static/keys/jsq.crt')),
+            ca: fs.readFileSync(path.resolve('src','static/keys/jsq.pem')),
+        }*/
+      },
+
+      plugins: [],
+
       module: {
         rules: [
           {
@@ -125,13 +158,14 @@ class WebpackBaseConfig {
             loader: 'file-loader',
             query: {
               limit: 10000,
-              name: './images/[hash].[ext]',
+              name: '[hash].[ext]',
+              outputPath: 'images',
               publicPath: '/assets/'
             },
           },
           {
             test: /^.((?!cssmodule).)*\.(sass|scss)$/,
-            use: ExtractTextPlugin.extract({
+            use: ExtractTextPlugin.extract({  //提取css单独打包
               fallback: 'style-loader',
               use: ['css-loader', 'sass-loader']
             })
@@ -198,16 +232,19 @@ class WebpackBaseConfig {
               },
               { loader: 'stylus-loader' }
             ]
+          },
+          {
+            test: /\.xml$/,
+            use: {
+              loader: 'xml-loader',
+              options: {
+                outputPath: 'static/data'
+              }
+            }
           }
         ]
       },
-      output: {
-        path: path.resolve('./dist/assets'),
-        filename: this.env === 'dist' ? '[name].[chunkhash].js' : 'app.js',
-        publicPath: '/assets/',
-        chunkFilename: '[name].[chunkhash:5].chunk.js'
-      },
-      plugins: [],
+
       resolve: {
         alias: {
           share: `${this.srcPathAbsolute}/share/`,

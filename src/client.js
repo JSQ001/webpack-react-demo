@@ -4,6 +4,12 @@ import Main from 'containers/main.js'
 import printMe from 'containers/print.js'
 import BG from 'images/BG.jpg';
 
+
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Looks like we are in development mode!');
+}
+
+
 const component=()=>{
     const element = document.createElement('div');
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');

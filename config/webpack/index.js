@@ -6,6 +6,6 @@ const test = require('./Test');
 
 
 module.exports = {
-  //dev,
+  dev,
   test
 };
