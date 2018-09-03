@@ -3,6 +3,7 @@
 /**
  * Default dev server configuration.
  */
+const path = require('path');
 const webpack = require('webpack');
 const WebpackBaseConfig = require('./Base');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -14,14 +15,14 @@ class WebpackDevConfig extends WebpackBaseConfig {
 
   constructor() {
     super();
-    this.env = 'dev';
+
     this.config={  //调用了父类的setConfig方法
       devtool: 'cheap-module-eval-source-map',
       entry: [
         'webpack-dev-server/client?http://localhost:8000/',
         'webpack/hot/only-dev-server',
         'react-hot-loader/patch',
-        './client.js'
+        `${this.srcPathAbsolute}/client.js`
       ],
       plugins: [
         new CleanWebpackPlugin(  //每次构建前，清理dist文件
@@ -60,6 +61,10 @@ class WebpackDevConfig extends WebpackBaseConfig {
         new ExtractTextPlugin("bundle.css"), //将**目录下必须的css模块打包到style.css文件中
       ]
     }
+  }
+
+  get env(){
+    return 'dev'
   }
 }
 

@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30264d19-11e2-4f64-81e6-8f3288e42992" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpack/Prod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webpack-react-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webpack-react-demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/webpack/Base.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/Base.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/webpack/Dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/Dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/babel-core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/babel-core/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/babel-plugin-transform-decorators/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/babel-plugin-transform-decorators/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/babel-preset-es2015/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/babel-preset-es2015/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -53,7 +41,7 @@
           <entry key="css" value="1" />
           <entry key="html" value="44" />
           <entry key="jpg" value="3" />
-          <entry key="js" value="54" />
+          <entry key="js" value="55" />
           <entry key="json" value="22" />
           <entry key="key" value="1" />
           <entry key="md" value="1" />
@@ -70,7 +58,7 @@
           <entry key="HTML" value="44" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="23" />
-          <entry key="JavaScript" value="54" />
+          <entry key="JavaScript" value="55" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="SCSS" value="3" />
           <entry key="XML" value="2" />
@@ -82,10 +70,10 @@
           <entry key="cat" value="1" />
           <entry key="css" value="6" />
           <entry key="html" value="298" />
-          <entry key="js" value="5244" />
+          <entry key="js" value="5350" />
           <entry key="json" value="246" />
           <entry key="scss" value="241" />
-          <entry key="txt" value="12" />
+          <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -93,9 +81,14 @@
           <entry key="CSS" value="6" />
           <entry key="HTML" value="298" />
           <entry key="JSON" value="277" />
-          <entry key="JavaScript" value="5244" />
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="JavaScript" value="5350" />
+          <entry key="PLAIN_TEXT" value="15" />
           <entry key="SCSS" value="241" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -105,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
+            <state relative-caret-position="219">
               <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
             </state>
           </provider>
@@ -126,9 +119,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/webpack/Base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            <state relative-caret-position="175">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
+                <element signature="e#5464#8196#0" />
                 <element signature="e#8214#8874#0" />
               </folding>
             </state>
@@ -147,11 +141,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/webpack/Dev.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-              <folding>
-                <element signature="e#470#634#0" />
-              </folding>
+            <state relative-caret-position="324">
+              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -159,26 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/webpack/Test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2503">
-              <caret line="143" column="37" lean-forward="true" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/webpack/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/print.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="508">
+              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -205,6 +187,8 @@
       <find>extract-text-webpack-plugin</find>
       <find>ExtractTextPlugin</find>
       <find>webpack</find>
+      <find>this.env</find>
+      <find>HotModuleReplacementPlugin</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -242,9 +226,9 @@
         <option value="$PROJECT_DIR$/config/webpack/Test.js" />
         <option value="$PROJECT_DIR$/src/client.js" />
         <option value="$PROJECT_DIR$/config/webpack/index.js" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/config/webpack/Base.js" />
         <option value="$PROJECT_DIR$/config/webpack/Dev.js" />
       </list>
@@ -292,17 +276,6 @@
               <item name="webpack-react-demo" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="webpack-react-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webpack-react-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webpack-react-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webpack-react-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -343,15 +316,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.test-server">
-    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webpack-react-demo/src/index.html">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="npm.dist">
     <configuration name="dev-server" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev-server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dist" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dist" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -397,29 +387,19 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="watch" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="watch" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.index.html" />
-      <item itemvalue="npm.watch" />
       <item itemvalue="npm.start" />
       <item itemvalue="npm.dev-server" />
       <item itemvalue="npm.test-server" />
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.dist" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dist" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.test-server" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.dev-server" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -441,7 +421,7 @@
       <workItem from="1534760499820" duration="53086000" />
       <workItem from="1535109947371" duration="15394000" />
       <workItem from="1535333655691" duration="19390000" />
-      <workItem from="1535681809546" duration="8544000" />
+      <workItem from="1535681809546" duration="13320000" />
     </task>
     <task id="LOCAL-00001" summary="第二次提交，">
       <created>1535078538235</created>
@@ -457,11 +437,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535354109017</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fa">
+      <created>1535699474419</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1535699474419</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124192000" />
+    <option name="totallyTimeSpent" value="128968000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -474,21 +461,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" x="719" y="190" width="241" height="669" id="Project" order="1" sideWeight="0.49689442" visible="true" weight="0.14526823" />
+      <window_info active="true" content_ui="combo" x="719" y="190" width="241" height="669" id="Project" order="1" sideWeight="0.49689442" visible="true" weight="0.14526823" />
       <window_info id="Structure" order="2" sideWeight="0.5015528" side_tool="true" weight="0.2496977" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4978903" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978903" weight="0.33061224" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32959184" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32959184" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4978903" weight="0.31734693" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4978903" visible="true" weight="0.31734693" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021097" side_tool="true" weight="0.32959184" />
       <window_info active="true" anchor="bottom" id="SVN Repositories" order="11" weight="0.3298647" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -507,7 +494,8 @@
     <MESSAGE value="第一次提交，" />
     <MESSAGE value="第二次提交，" />
     <MESSAGE value="88" />
-    <option name="LAST_COMMIT_MESSAGE" value="88" />
+    <MESSAGE value="fa" />
+    <option name="LAST_COMMIT_MESSAGE" value="fa" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Desktop/new-pre-payment.js" />
@@ -621,27 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/print.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/extract-text-webpack-plugin/loader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -662,34 +629,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding>
-            <element signature="e#62#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/common.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack/Test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2503">
-          <caret line="143" column="37" lean-forward="true" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -700,11 +643,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/print.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding>
+            <element signature="e#62#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack/Test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack/Base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        <state relative-caret-position="175">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
+            <element signature="e#5464#8196#0" />
             <element signature="e#8214#8874#0" />
           </folding>
         </state>
@@ -712,11 +701,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack/Dev.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding>
-            <element signature="e#470#634#0" />
-          </folding>
+        <state relative-caret-position="324">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
         </state>
       </provider>
     </entry>

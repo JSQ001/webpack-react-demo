@@ -51,10 +51,6 @@ class WebpackBaseConfig {
     return 'dev';
   }
 
-  set env(env){
-    this.env = env
-  }
-
   /**
    * Get the absolute path to src directory
    * @return {String}
