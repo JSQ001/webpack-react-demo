@@ -2,8 +2,8 @@
   "presets": [
     [
       "es2015", { "modules": false }
-    ]
-    //"react",
+    ],
+    "react"
     //"airbnb"
   ],
   "plugins": [

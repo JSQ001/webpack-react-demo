@@ -1,9 +1,0 @@
-{
-  "main.js": "/webpack-react-demo/dist/bundle.js",
-  "main.css": "/webpack-react-demo/dist/bundle.css",
-  "images/my.woff": "/webpack-react-demo/dist/images/d41d8cd98f00b204e9800998ecf8427e.woff",
-  "images/my.woff2": "/webpack-react-demo/dist/images/d41d8cd98f00b204e9800998ecf8427e.woff2",
-  "images/BG.jpg": "/webpack-react-demo/dist/images/a9da99b9526eca9f4581d8393034bc86.jpg",
-  "favicon.png": "/webpack-react-demo/dist/favicon.png",
-  "index.html": "/webpack-react-demo/dist/index.html"
-}

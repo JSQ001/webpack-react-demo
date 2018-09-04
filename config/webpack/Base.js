@@ -79,14 +79,15 @@ class WebpackBaseConfig {
     };
 
     return {
-      //context: this.srcPathAbsolute,
+      context: this.srcPathAbsolute,
       entry: {
         app: `${this.srcPathAbsolute}/client.js`,
       },
       output: {
         path: path.resolve('dist'),
         filename: 'bundle.js',  //[name].[chunkhash].js
-        publicPath:'/webpack-react-demo/dist/',  //浏览器访问资源的url： publicPath: /assets/ =》 http:server/assets/
+        publicPath:'/assets/',  //浏览器访问资源的url： publicPath: /assets/ =》 http:server/assets/
+        //publicPath:'/webpack-react-demo/dist/',  //直接打包,在项目中直接访问
         chunkFilename: '[name].[chunkhash:5].chunk.js'  //被 chunk 的 name 替换（或者，在 chunk 没有 name 时使用 id 替换）,被 chunk 的 hash 替换。
       },
 
@@ -94,10 +95,10 @@ class WebpackBaseConfig {
       mode: 'development',  //production: 压缩文件，删除未使用代码(dead code)
 
       devServer: {   //提供一个简单的web服务器，不会生成打包文件，只会存在内存
-        contentBase: path.resolve('test')+'/',   //（打包后资源存放虚拟目录，实际上存在内存,类似于output.path）资源目录,不配置则是项目下，推荐使用绝对路径
+        contentBase: path.resolve('dist'),   //（打包后资源存放虚拟目录，实际上存在内存,类似于output.path）资源目录,不配置则是项目下，推荐使用绝对路径
         compress: false, //资源目录下的文件是否压缩
         port: 8899,
-        publicPath: '/webpack-react-demo/dist',  //此路径下的打包文件可在浏览器中访问,类似于(与其保持一致,或者二者配一个)output.publicPath
+        publicPath: '/assets/',  //此路径下的打包文件可在浏览器中访问,类似于(与其保持一致,或者二者配一个)output.path
         //host: '192.168.1.1',
         //lazy: true,
         inline: true, //当刷新页面的时候，一个小型的客户端被添加到webpack.config.js的入口文件中
@@ -154,9 +155,9 @@ class WebpackBaseConfig {
             loader: 'file-loader',
             query: {
               limit: 10000,
-              name: '[hash].[ext]',
-              outputPath: 'images',
-              publicPath: '/assets/'
+              outputPath: 'images/',   //path 目录下
+              name: '[name]@[hash:8].[ext]',  //在原图片名前加上8位 hash , 不配置值默认是文件哈希,
+              publicPath: '/dist/images/'
             },
           },
           {
