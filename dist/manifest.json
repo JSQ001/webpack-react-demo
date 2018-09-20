@@ -1,0 +1,9 @@
+{
+  "main.js": "/assets/bundle.js",
+  "main.css": "/assets/bundle.css",
+  "images/my.woff": "/assets/images/my@d41d8cd9.woff",
+  "images/my.woff2": "/assets/images/my@d41d8cd9.woff2",
+  "images/BG.jpg": "/assets/images/BG@a9da99b9.jpg",
+  "favicon.png": "/assets/favicon.png",
+  "index.html": "/assets/index.html"
+}
